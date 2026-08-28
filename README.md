@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Oslo Girl Social
 
-## Getting Started
+Marketing site for Oslo Girl Social — newsletter signup, membership tiers,
+and a partner inquiry form. Built with Next.js + Tailwind, deployed on
+Vercel. Newsletter and partner submissions forward to HubSpot's CRM.
 
-First, run the development server:
+## Local development
 
 ```bash
+npm install
+cp .env.local.example .env.local   # fill in your HubSpot values (see below)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Connecting HubSpot
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Forms won't actually submit anywhere until this is set up:
 
-## Learn More
+1. Create a free HubSpot account.
+2. Find your **Portal ID** under Account Settings > Account Setup > Account Defaults.
+3. Create two forms under Marketing > Lead Capture > Forms:
+   - **Newsletter signup** — one field: Email
+   - **Partner inquiry** — fields: First name, Email, Company, Message
+4. Each form's edit URL is `app.hubspot.com/forms/<PORTAL_ID>/<FORM_GUID>/edit` — copy the GUID.
+5. Put the three values into `.env.local` (locally) and into Vercel's
+   Project Settings > Environment Variables (for production).
 
-To learn more about Next.js, take a look at the following resources:
+## Deploying
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Push to `main` and Vercel deploys automatically (see collaboration workflow
+below for how the repo is connected to Vercel).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Working with a collaborator
 
-## Deploy on Vercel
+We use one shared GitHub repo. Nobody commits straight to `main` —
+everything goes through a branch and a pull request, and Vercel deploys a
+preview URL for every PR automatically so you can see changes live before
+merging.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Day-to-day workflow:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+git checkout main
+git pull
+git checkout -b your-name/short-description   # e.g. emily/update-pricing
+# ... make changes ...
+git add .
+git commit -m "Update membership pricing"
+git push -u origin your-name/short-description
+```
+
+Then open a pull request on GitHub. Vercel comments on the PR with a preview
+link. Once it looks good, merge — that auto-deploys to production.
+
+**Using git worktrees** (optional, handy if you're switching between two
+things at once, e.g. a hotfix while a bigger feature is in progress):
+
+A worktree lets you check out a second branch into its own folder, without
+stashing or losing your place in the first one. This is a *personal*, local
+convenience — it doesn't replace pushing/pulling through GitHub, and your
+colleague has their own separate clone with their own worktrees on their own
+machine.
+
+```bash
+# from inside oslo-girl-social, on any branch
+git worktree add ../oslo-girl-social-pricing emily/update-pricing
+cd ../oslo-girl-social-pricing
+npm install       # each worktree needs its own node_modules
+npm run dev -- -p 3001   # run on a different port if the other worktree's dev server is still running
+```
+
+When you're done with that branch:
+
+```bash
+git worktree remove ../oslo-girl-social-pricing
+```
+
+## Tech stack
+
+- [Next.js](https://nextjs.org) (App Router) + TypeScript + Tailwind CSS
+- Hosted on [Vercel](https://vercel.com)
+- Form backend: HubSpot Forms API (`src/lib/hubspot.ts`)
