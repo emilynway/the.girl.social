@@ -32,7 +32,7 @@ export async function submitToHubspot(
         fields,
         context: {
           pageUri: "oslogirlsocial.com",
-          pageName: "Oslo Girl Social",
+          pageName: "The Girl Social",
         },
       }),
     }

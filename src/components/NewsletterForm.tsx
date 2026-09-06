@@ -37,7 +37,7 @@ export default function NewsletterForm() {
   if (status === "success") {
     return (
       <p className="text-accent-dark font-medium">
-        You&apos;re on the list — welcome to Oslo Girl Social! 🎉
+        You&apos;re on the list — welcome to The Girl Social! 🎉
       </p>
     );
   }
@@ -56,7 +56,7 @@ export default function NewsletterForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent-dark disabled:opacity-60"
+          className="rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent-dark disabled:opacity-60"
         >
           {status === "loading" ? "Joining..." : "Join the list"}
         </button>

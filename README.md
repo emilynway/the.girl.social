@@ -1,6 +1,6 @@
-# Oslo Girl Social
+# The Girl Social
 
-Marketing site for Oslo Girl Social — newsletter signup, membership tiers,
+Marketing site for The Girl Social — newsletter signup, membership tiers,
 and a partner inquiry form. Built with Next.js + Tailwind, deployed on
 Vercel. Newsletter and partner submissions forward to HubSpot's CRM.
 

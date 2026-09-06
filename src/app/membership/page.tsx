@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
-  title: "Membership | Oslo Girl Social",
+  title: "Membership | The Girl Social",
 };
 
 const tiers = [
   {
     name: "Social",
     price: "Free",
-    description: "Get started and see what Oslo Girl Social is about.",
+    description: "Get started and see what The Girl Social is about.",
     features: ["Newsletter with event listings", "Access to public events", "Community updates"],
   },
   {
@@ -40,7 +40,7 @@ const tiers = [
 export default function MembershipPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
-      <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+      <h1 className="font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
         Membership options
       </h1>
       <p className="mt-4 max-w-2xl text-muted">
@@ -58,8 +58,10 @@ export default function MembershipPage() {
                 : "border-border bg-card"
             }`}
           >
-            <h2 className="text-lg font-semibold">{tier.name}</h2>
-            <p className="mt-1 text-2xl font-semibold text-accent-dark">{tier.price}</p>
+            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              {tier.name}
+            </h2>
+            <p className="mt-1 font-serif text-2xl font-black">{tier.price}</p>
             <p className="mt-2 text-sm text-muted">{tier.description}</p>
             <ul className="mt-4 flex flex-col gap-2 text-sm">
               {tier.features.map((feature) => (
@@ -74,7 +76,9 @@ export default function MembershipPage() {
       </div>
 
       <div className="mt-16 rounded-2xl border border-border bg-card p-8">
-        <h2 className="text-xl font-semibold">Be first to know when membership opens</h2>
+        <h2 className="font-serif text-xl font-black uppercase tracking-[-0.025em]">
+          Be first to know when membership opens
+        </h2>
         <div className="mt-4">
           <NewsletterForm />
         </div>

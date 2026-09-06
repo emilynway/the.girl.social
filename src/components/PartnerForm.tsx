@@ -93,7 +93,7 @@ export default function PartnerForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="self-start rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent-dark disabled:opacity-60"
+        className="self-start rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent-dark disabled:opacity-60"
       >
         {status === "loading" ? "Sending..." : "Send inquiry"}
       </button>

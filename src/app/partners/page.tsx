@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import PartnerForm from "@/components/PartnerForm";
 
 export const metadata: Metadata = {
-  title: "Partners | Oslo Girl Social",
+  title: "Partners | The Girl Social",
 };
 
 export default function PartnersPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
-      <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-        Partner with Oslo Girl Social
+      <h1 className="font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
+        Partner with The Girl Social
       </h1>
       <p className="mt-4 max-w-2xl text-muted">
         We collaborate with local businesses to bring our members exclusive
@@ -20,7 +20,9 @@ export default function PartnersPage() {
 
       <div className="mt-10 grid gap-10 sm:grid-cols-2">
         <div>
-          <h2 className="text-lg font-semibold">What partnership can look like</h2>
+          <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            What partnership can look like
+          </h2>
           <ul className="mt-4 flex flex-col gap-3 text-sm text-muted">
             <li>• Featured discounts for our members</li>
             <li>• Co-hosted events at your venue</li>
@@ -29,7 +31,9 @@ export default function PartnersPage() {
           </ul>
         </div>
         <div>
-          <h2 className="text-lg font-semibold">Tell us about your business</h2>
+          <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            Tell us about your business
+          </h2>
           <div className="mt-4">
             <PartnerForm />
           </div>
