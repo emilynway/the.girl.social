@@ -11,6 +11,10 @@ export class HubspotNotConfiguredError extends Error {
  * Submits a form to HubSpot's Forms API so entries show up as contacts/deals
  * in the HubSpot CRM. Requires HUBSPOT_PORTAL_ID and the given form's GUID
  * env var to be set — see .env.local.example.
+ *
+ * The account is hosted in HubSpot's EU data center, which uses a
+ * region-specific API host (api-eu1.hsforms.com) instead of the default
+ * api.hsforms.com — submissions silently fail against the wrong host.
  */
 export async function submitToHubspot(
   formGuidEnvVar: string,
@@ -24,14 +28,14 @@ export async function submitToHubspot(
   }
 
   const response = await fetch(
-    `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`,
+    `https://api-eu1.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         fields,
         context: {
-          pageUri: "oslogirlsocial.com",
+          pageUri: "thegirlsocial.com",
           pageName: "Oslo Girl Social",
         },
       }),
