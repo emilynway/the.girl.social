@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
         email
       );
       return NextResponse.json(
-        { error: "Signups aren't connected yet — try again soon." },
+        { error: "Signups aren't connected yet. Try again soon." },
         { status: 503 }
       );
     }

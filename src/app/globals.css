@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fbf6f1;
-  --foreground: #2b2622;
-  --accent: #c5654a;
-  --accent-dark: #a8503a;
-  --muted: #776f68;
-  --card: #ffffff;
-  --border: #e8ddd2;
+  /* TGS brand palette (Figma "TGS - Brand", 04 Colour) */
+  --background: #ffffff; /* White — ground */
+  --foreground: #111111; /* Black — ink */
+  --accent: #e4002b; /* Cherry — the only loud colour */
+  --accent-dark: #b4001f; /* Cherry, darkened for hover/pressed */
+  --stem: #14372b; /* Stem — tiny details only, never a large field */
+  --muted: #767676;
+  --card: #f4f1ec; /* Bone — secondary surface, never the page ground */
+  --border: #e4e0d8;
 }
 
 @theme inline {
@@ -15,11 +17,12 @@
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-accent-dark: var(--accent-dark);
+  --color-stem: var(--stem);
   --color-muted: var(--muted);
   --color-card: var(--card);
   --color-border: var(--border);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
 }
 
 body {

@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
         company,
       });
       return NextResponse.json(
-        { error: "Partner inquiries aren't connected yet — try again soon." },
+        { error: "Partner inquiries aren't connected yet. Try again soon." },
         { status: 503 }
       );
     }
