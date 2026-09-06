@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import TarotRsvpForm from "@/components/TarotRsvpForm";
 
 export const metadata: Metadata = {
@@ -15,14 +16,26 @@ const details = [
 export default function TarotReadingEventPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
-      <h1 className="font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
-        The Journey Within: Personal Growth Through Tarot
-      </h1>
-      <p className="mt-4 max-w-2xl text-muted">
-        Join Melissa from Up Power Coaching for a 2-hour workshop exploring
-        the Major Arcana as a mirror for self-reflection, growth, and
-        transformation. No experience needed.
-      </p>
+      <div className="grid gap-10 sm:grid-cols-2 sm:items-center">
+        <div>
+          <h1 className="font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
+            The Journey Within: Personal Growth Through Tarot
+          </h1>
+          <p className="mt-4 max-w-2xl text-muted">
+            Join Melissa from Up Power Coaching for a 2-hour workshop
+            exploring the Major Arcana as a mirror for self-reflection,
+            growth, and transformation. No experience needed.
+          </p>
+        </div>
+        <Image
+          src="/events/tarot-reading/tarot-spread.jpg"
+          alt="A tarot card spread laid out on a table during a reading"
+          width={564}
+          height={846}
+          className="w-full max-w-sm justify-self-center rounded-2xl object-cover sm:justify-self-end"
+          priority
+        />
+      </div>
 
       <dl className="mt-10 grid gap-6 border-y border-border py-8 sm:grid-cols-4">
         {details.map((item) => (
@@ -70,21 +83,30 @@ export default function TarotReadingEventPage() {
         <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
           About Melissa
         </h2>
-        <div className="mt-4 flex flex-col gap-4 max-w-2xl text-muted">
-          <p>
-            Hi, I&apos;m Melissa, a lifelong student of personal growth and a
-            passionate tarot practitioner. I hold a coaching degree and
-            combine my formal training with tarot practice, especially the
-            wisdom of the Major Arcana, to support self-reflection,
-            transformation, and deeper inner connection.
-          </p>
-          <p>
-            My approach is grounded, intuitive, and inclusive, focusing on
-            how symbolism and archetypes can empower real-life growth.
-            Whether you&apos;re new to tarot or reconnecting with it, I aim
-            to create a safe, inspiring space where insight and personal
-            truth can emerge.
-          </p>
+        <div className="mt-4 flex flex-col gap-6 sm:flex-row">
+          <Image
+            src="/events/tarot-reading/melissa-portrait.jpg"
+            alt="Portrait of Melissa from Up Power Coaching"
+            width={420}
+            height={380}
+            className="h-40 w-40 shrink-0 rounded-full object-cover"
+          />
+          <div className="flex flex-col gap-4 max-w-2xl text-muted">
+            <p>
+              Hi, I&apos;m Melissa, a lifelong student of personal growth
+              and a passionate tarot practitioner. I hold a coaching degree
+              and combine my formal training with tarot practice,
+              especially the wisdom of the Major Arcana, to support
+              self-reflection, transformation, and deeper inner connection.
+            </p>
+            <p>
+              My approach is grounded, intuitive, and inclusive, focusing
+              on how symbolism and archetypes can empower real-life growth.
+              Whether you&apos;re new to tarot or reconnecting with it, I
+              aim to create a safe, inspiring space where insight and
+              personal truth can emerge.
+            </p>
+          </div>
         </div>
         <p className="mt-4 text-sm text-muted">
           Follow Melissa:{" "}
