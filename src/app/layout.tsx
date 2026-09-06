@@ -18,7 +18,7 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   title: "The Girl Social",
   description:
-    "A community for women in Oslo — events, connection, and membership. Join the newsletter or explore partnership opportunities.",
+    "A community for women in Oslo: events, connection, and membership. Join the newsletter or explore partnership opportunities.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

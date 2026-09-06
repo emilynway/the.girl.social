@@ -9,7 +9,7 @@ export default function Home() {
           A social club for women building a life in Oslo.
         </h1>
         <p className="mt-6 max-w-xl text-lg text-muted">
-          Events, connection, and community for the women of Oslo — new and
+          Events, connection, and community for the women of Oslo, new and
           longtime locals alike. Join the newsletter to hear about upcoming
           meetups first.
         </p>

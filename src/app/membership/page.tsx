@@ -45,7 +45,7 @@ export default function MembershipPage() {
       </h1>
       <p className="mt-4 max-w-2xl text-muted">
         We&apos;re opening membership soon. Here&apos;s what each level will
-        include — join the newsletter to be first in line when sign-ups open.
+        include. Join the newsletter to be first in line when sign-ups open.
       </p>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-3">

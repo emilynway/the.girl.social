@@ -37,7 +37,7 @@ export default function NewsletterForm() {
   if (status === "success") {
     return (
       <p className="text-accent-dark font-medium">
-        You&apos;re on the list — welcome to The Girl Social! 🎉
+        You&apos;re on the list. Welcome to The Girl Social! 🎉
       </p>
     );
   }
