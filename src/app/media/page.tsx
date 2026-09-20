@@ -46,10 +46,8 @@ const press: PressItem[] = [
 export default function MediaPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-        As seen in
-      </p>
-      <h1 className="mt-2 font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
+      <span className="sticker tilt-left">As seen in</span>
+      <h1 className="mt-4 font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
         Media
       </h1>
       <p className="mt-4 max-w-2xl text-muted">
@@ -57,13 +55,15 @@ export default function MediaPage() {
       </p>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2">
-        {press.map((item) => (
+        {press.map((item, i) => (
           <a
             key={item.href}
             href={item.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col rounded-2xl border border-border bg-card p-6 transition hover:border-accent"
+            className={`pop flex flex-col rounded-2xl border-2 border-foreground bg-card p-6 transition hover:bg-accent-2 ${
+              i % 2 === 0 ? "tilt-left" : "tilt-right"
+            }`}
           >
             <div className="flex items-center justify-between gap-3">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">

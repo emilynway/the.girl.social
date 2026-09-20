@@ -57,14 +57,12 @@ export default function MembershipPage() {
       </p>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-3">
-        {tiers.map((tier) => (
+        {tiers.map((tier, i) => (
           <div
             key={tier.name}
-            className={`flex flex-col rounded-2xl border p-6 ${
-              tier.highlighted
-                ? "border-accent bg-card shadow-sm"
-                : "border-border bg-card"
-            }`}
+            className={`pop flex flex-col rounded-2xl border-2 border-foreground p-6 ${
+              tier.highlighted ? "bg-accent-2" : "bg-card"
+            } ${i % 2 === 0 ? "tilt-left" : "tilt-right"}`}
           >
             <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               {tier.name}
@@ -83,7 +81,7 @@ export default function MembershipPage() {
         ))}
       </div>
 
-      <div className="mt-16 rounded-2xl border border-border bg-card p-8">
+      <div className="mt-16 rounded-2xl border-2 border-foreground bg-card p-8 pop">
         <h2 className="font-serif text-xl font-black uppercase tracking-[-0.025em]">
           Be first to know when membership opens
         </h2>

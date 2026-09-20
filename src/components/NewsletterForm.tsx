@@ -51,12 +51,12 @@ export default function NewsletterForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@email.com"
-          className="flex-1 rounded-full border border-border bg-card px-5 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+          className="flex-1 rounded-full border-2 border-foreground bg-background px-5 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
         />
         <button
           type="submit"
           disabled={status === "loading"}
-          className="rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent-dark disabled:opacity-60"
+          className="pop rounded-full border-2 border-foreground bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent-dark disabled:opacity-60"
         >
           {status === "loading" ? "Joining..." : "Join the list"}
         </button>
