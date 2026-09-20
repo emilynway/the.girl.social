@@ -1,5 +1,6 @@
-import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
+import VibeQuiz from "@/components/VibeQuiz";
+import FounderStory from "@/components/FounderStory";
 
 export default function Home() {
   return (
@@ -47,22 +48,39 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-16">
-        <div className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-border bg-card p-8 sm:flex-row sm:items-center">
-          <div>
-            <h2 className="font-serif text-xl font-black uppercase tracking-[-0.025em]">
-              Curious about membership?
-            </h2>
-            <p className="mt-1 text-sm text-muted">
-              See what&apos;s included at each level.
-            </p>
+      <section className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+          Find your fit
+        </p>
+        <h2 className="mt-2 max-w-lg font-serif text-2xl font-black uppercase leading-tight tracking-[-0.025em] sm:text-3xl">
+          What kind of Oslo Girl are you?
+        </h2>
+        <p className="mt-3 max-w-xl text-muted">
+          Three quick questions to figure out which of our events you&apos;ll
+          love first.
+        </p>
+        <div className="mt-8">
+          <VibeQuiz />
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-card">
+        <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
+          <FounderStory />
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
+        <div className="rounded-2xl border border-border bg-card p-8 sm:p-10">
+          <h2 className="font-serif text-xl font-black uppercase tracking-[-0.025em] sm:text-2xl">
+            Stay in the loop
+          </h2>
+          <p className="mt-2 max-w-md text-sm text-muted">
+            First word on new meetups, workshops, and members-only news.
+          </p>
+          <div className="mt-6">
+            <NewsletterForm />
           </div>
-          <Link
-            href="/membership"
-            className="rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent-dark"
-          >
-            View membership options
-          </Link>
         </div>
       </section>
     </div>

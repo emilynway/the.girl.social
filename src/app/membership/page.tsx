@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "Membership | The Girl Social",
 };
+
+// Unpublished for now — flip this off to bring the page back.
+const MEMBERSHIP_PAGE_ENABLED = false;
 
 const tiers = [
   {
@@ -38,6 +42,10 @@ const tiers = [
 ];
 
 export default function MembershipPage() {
+  if (!MEMBERSHIP_PAGE_ENABLED) {
+    notFound();
+  }
+
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
       <h1 className="font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
