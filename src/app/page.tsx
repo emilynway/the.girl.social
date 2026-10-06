@@ -1,4 +1,3 @@
-import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export default function Home() {
@@ -47,24 +46,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-16">
-        <div className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-border bg-card p-8 sm:flex-row sm:items-center">
-          <div>
-            <h2 className="font-serif text-xl font-black uppercase tracking-[-0.025em]">
-              Curious about membership?
-            </h2>
-            <p className="mt-1 text-sm text-muted">
-              See what&apos;s included at each level.
-            </p>
-          </div>
-          <Link
-            href="/membership"
-            className="rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent-dark"
-          >
-            View membership options
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }
