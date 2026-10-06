@@ -4,7 +4,7 @@ import { useState, FormEvent } from "react";
 
 type Status = "idle" | "loading" | "success" | "error";
 
-export default function YinRsvpForm() {
+export default function YinRsvpForm({ waitlist = false }: { waitlist?: boolean }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -37,8 +37,9 @@ export default function YinRsvpForm() {
   if (status === "success") {
     return (
       <p className="text-accent-dark font-medium">
-        You&apos;re in! We&apos;ve saved you a spot. See you at Kuro at
-        12:15 on Sunday 💘
+        {waitlist
+          ? "You're on the waitlist! We'll email you if a spot opens up 💘"
+          : "You're on the list! We'll email you to confirm your spot 💘"}
       </p>
     );
   }
@@ -63,7 +64,11 @@ export default function YinRsvpForm() {
         disabled={status === "loading"}
         className="pop self-start rounded-full border-2 border-foreground bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent-dark disabled:opacity-60"
       >
-        {status === "loading" ? "Reserving..." : "Reserve my spot"}
+        {status === "loading"
+          ? "Sending..."
+          : waitlist
+            ? "Join the waitlist"
+            : "Reserve my spot"}
       </button>
       {status === "error" && <p className="text-sm text-red-600">{errorMessage}</p>}
     </form>
