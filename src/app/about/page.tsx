@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About | Oslo Girl Social",
@@ -51,13 +52,36 @@ export default function AboutPage() {
         <p>
           They did. Those walks grew into Oslo Girl Social: walks, workshops,
           yoga and good conversations for women building a life in Oslo,
-          whether you arrived last month or years ago. Come alone or bring a
-          friend. Either way, you&apos;ll leave with a few more.
+          whether you arrived last month or years ago.
+        </p>
+        <p>
+          I may have started it, but it&apos;s the community that keeps it
+          going. There are now thousands of active members, and many of them
+          organise their own events and put themselves out there. Like every
+          good community, this one runs on the power of the amazing women
+          behind it.
+        </p>
+        <p>
+          Come alone or bring a friend. Either way, you&apos;ll leave with a
+          few more.
         </p>
       </div>
       <p className="mt-8 max-w-2xl font-serif text-xl italic text-accent">
         See you there. Emily 💘
       </p>
+
+      <figure className="mt-12 max-w-3xl">
+        <Image
+          src="/about/community.webp"
+          alt="A big group of Oslo Girl Social members together on the grass in an autumn park"
+          width={870}
+          height={572}
+          className="w-full rounded-2xl object-cover"
+        />
+        <figcaption className="mt-3 text-sm text-muted">
+          Just some of the amazing women who make Oslo Girl Social what it is.
+        </figcaption>
+      </figure>
 
       <div className="mt-16">
         <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
