@@ -51,8 +51,18 @@ export default function AboutPage() {
         <p>
           They did. Those walks grew into Oslo Girl Social: walks, workshops,
           yoga and good conversations for women building a life in Oslo,
-          whether you arrived last month or years ago. Come alone or bring a
-          friend. Either way, you&apos;ll leave with a few more.
+          whether you arrived last month or years ago.
+        </p>
+        <p>
+          I may have started it, but it&apos;s the community that keeps it
+          going. There are now thousands of active members, and many of them
+          organise their own events and put themselves out there. Like every
+          good community, this one runs on the power of the amazing women
+          behind it.
+        </p>
+        <p>
+          Come alone or bring a friend. Either way, you&apos;ll leave with a
+          few more.
         </p>
       </div>
       <p className="mt-8 max-w-2xl font-serif text-xl italic text-accent">
