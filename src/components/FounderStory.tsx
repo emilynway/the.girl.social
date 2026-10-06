@@ -14,7 +14,9 @@ export default function FounderStory() {
         circle from scratch. When a knee injury took me off my runs, I started
         walking instead, and I&apos;d learned how much community matters too.
         So I put the two together, invited women to walk with me, and Oslo
-        Girl Social was born.
+        Girl Social was born. Today it&apos;s thousands of women strong, and
+        it runs on the power of the amazing members who show up, organise
+        their own events and put themselves out there.
       </p>
       <Link
         href="/about"
