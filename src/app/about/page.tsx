@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About | Oslo Girl Social",
   description:
-    "Why Emily started Oslo Girl Social: a warm, easy way for women to make friends in Oslo.",
+    "Why Emily started Oslo Girl Social: walking, community and an easy way for women to make friends in Oslo.",
 };
 
 const pressLinks: { publication: string; title: string; url: string }[] = [
@@ -32,21 +32,27 @@ export default function AboutPage() {
       </h1>
       <div className="mt-8 flex flex-col gap-4 max-w-2xl text-muted">
         <p>
-          When I moved to Oslo for work, I had a job, a flat and a lot of
-          quiet weekends. Oslo is beautiful, but making real friends here
-          takes time, and I honestly didn&apos;t know where to start.
+          I&apos;ve moved a lot in my life, so I know what it&apos;s like to
+          land in a new city and build your circle from scratch.
         </p>
         <p>
-          So I did the simplest thing I could think of: I asked a few women
-          to join me for a Sunday walk. It turned out so many of us felt the
-          same way: new in town or not, we all wanted more people to call
-          when the weekend came around.
+          When a knee injury took me off my runs, I started walking instead:
+          hot girl walks, mental health walks, long ones with a podcast and
+          short ones just to clear my head. I felt the difference straight
+          away, and the research agrees. Walking is one of the simplest
+          things we can do for both body and mind.
         </p>
         <p>
-          Those walks grew into Oslo Girl Social. Coffee, yoga, workshops,
-          long walks and good conversations, for women building a life here,
-          whether you arrived last month or have been here for years. Come
-          alone, bring a friend, and leave with a few more.
+          I&apos;d also learned how much community matters for our wellbeing.
+          So I thought: why not put the two together and see what happens?
+          It was a little experiment. I invited women to walk with me and
+          waited to see who would show up.
+        </p>
+        <p>
+          They did. Those walks grew into Oslo Girl Social: walks, workshops,
+          yoga and good conversations for women building a life in Oslo,
+          whether you arrived last month or years ago. Come alone or bring a
+          friend. Either way, you&apos;ll leave with a few more.
         </p>
       </div>
       <p className="mt-8 max-w-2xl font-serif text-xl italic text-accent">
