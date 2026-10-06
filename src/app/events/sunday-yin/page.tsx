@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 // Flip to true once 20 people have signed up: the page switches to
 // waitlist wording and new signups land on the same HubSpot form, so
 // everyone after the first 20 (by submission time) is the waitlist.
-const FULL = false;
+const FULL = true;
 
 const details = [
   { label: "When", value: "Sunday, 11 October · Meet at 12:15" },
