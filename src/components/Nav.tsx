@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const links = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
   { href: "/media", label: "Media" },
   { href: "/partners", label: "Partners" },
 ];
@@ -9,7 +10,6 @@ const links = [
 const tickerItems = [
   "REAL-LIFE EVENTS",
   "A GENUINE COMMUNITY",
-  "MEMBERSHIP PERKS",
   "OSLO, NORWAY",
 ];
 

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Membership | The Girl Social",
 };
 
-// Unpublished for now — flip this off to bring the page back.
+// Unpublished for now — flip this to true to bring the page back.
 const MEMBERSHIP_PAGE_ENABLED = false;
 
 const tiers = [

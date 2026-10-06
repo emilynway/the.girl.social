@@ -21,7 +21,7 @@ export default function Home() {
       </section>
 
       <section className="border-y-2 border-foreground bg-card">
-        <div className="mx-auto grid max-w-5xl gap-8 px-6 py-16 sm:grid-cols-3">
+        <div className="mx-auto grid max-w-5xl gap-8 px-6 py-16 sm:grid-cols-2">
           <div className="rounded-2xl border-2 border-foreground bg-background p-6 pop tilt-left">
             <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               Real-life events
@@ -37,15 +37,6 @@ export default function Home() {
             </h2>
             <p className="mt-2 text-sm text-muted">
               Meet women who get what it&apos;s like building a life here.
-            </p>
-          </div>
-          <div className="rounded-2xl border-2 border-foreground bg-background p-6 pop tilt-right">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-              Membership perks
-            </h2>
-            <p className="mt-2 text-sm text-muted">
-              Unlock exclusive events and partner discounts around the city.
-              The good kind of perks.
             </p>
           </div>
         </div>
