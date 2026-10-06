@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      // Short link for the Instagram bio
+      { source: "/sunday-yin", destination: "/events/sunday-yin", permanent: false },
+    ];
+  },
 };
 
 export default nextConfig;
