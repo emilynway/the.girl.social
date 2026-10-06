@@ -5,14 +5,19 @@ import YinRsvpForm from "@/components/YinRsvpForm";
 export const metadata: Metadata = {
   title: "In for some yin? Free yin class with Studio13 | Oslo Girl Social",
   description:
-    "Free yin class with Studio13 on Sunday 11 October. Meet 12:15 at Kuro, Grünerløkka. Limited spots.",
+    "Free yin class with Studio13 on Sunday 11 October. Meet 12:15 at Kuro, Grünerløkka. Only 20 spots.",
 };
+
+// Flip to true once 20 people have signed up: the page switches to
+// waitlist wording and new signups land on the same HubSpot form, so
+// everyone after the first 20 (by submission time) is the waitlist.
+const FULL = false;
 
 const details = [
   { label: "When", value: "Sunday, 11 October · Meet at 12:15" },
   { label: "Meet", value: "Kuro, Rathkes gate 9C, Grünerløkka" },
   { label: "Price", value: "Free, gifted by Studio13" },
-  { label: "Spots", value: "Limited" },
+  { label: "Spots", value: FULL ? "Full, join the waitlist" : "Only 20" },
 ];
 
 const plan = [
@@ -58,14 +63,16 @@ export default function SundayYinEventPage() {
           </p>
           <p className="mt-4 max-w-2xl text-muted">
             Come meet some new gals, get in some movement and have a chill
-            Sunday moment together. No experience needed. Spots are limited, so
-            reserve yours below 💘
+            Sunday moment together. No experience needed.{" "}
+            {FULL
+              ? "We're full, but join the waitlist and we'll let you know if a spot opens up 💘"
+              : "There are only 20 spots, so reserve yours below 💘"}
           </p>
           <a
             href="#reserve"
             className="pop mt-6 inline-block rounded-full border-2 border-foreground bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent-dark"
           >
-            Reserve my spot
+            {FULL ? "Join the waitlist" : "Reserve my spot"}
           </a>
         </div>
         <Image
@@ -132,13 +139,15 @@ export default function SundayYinEventPage() {
         </div>
         <div id="reserve">
           <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            Reserve your spot
+            {FULL ? "Join the waitlist" : "Reserve your spot"}
           </h2>
           <p className="mt-4 text-sm text-muted">
-            Just pop in your email and we&apos;ll save you a mat.
+            {FULL
+              ? "All 20 spots are taken. Pop in your email and we'll let you know if one opens up."
+              : "Just pop in your email and we'll be in touch to confirm your spot."}
           </p>
           <div className="mt-4">
-            <YinRsvpForm />
+            <YinRsvpForm waitlist={FULL} />
           </div>
         </div>
       </div>
