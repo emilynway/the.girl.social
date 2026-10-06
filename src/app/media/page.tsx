@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Media | The Girl Social",
 };
+
+// Unpublished for now (press links live on /about) — flip this to true to
+// bring the page back.
+const MEDIA_PAGE_ENABLED = false;
 
 type PressItem = {
   outlet: string;
@@ -44,6 +49,10 @@ const press: PressItem[] = [
 ];
 
 export default function MediaPage() {
+  if (!MEDIA_PAGE_ENABLED) {
+    notFound();
+  }
+
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
       <span className="sticker tilt-left">As seen in</span>
