@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  /* TGS brand palette (Figma "TGS - Brand", 04 Colour) */
-  --background: #ffffff; /* White — ground */
-  --foreground: #111111; /* Black — ink */
-  --accent: #e4002b; /* Cherry — the only loud colour */
+  /* TGS brand palette (Figma "TGS - Brand", 04 Colour), warmed up */
+  --background: #fff6e6; /* Vanilla — warm ground, not stark white */
+  --foreground: #241a10; /* Warm ink, not flat black */
+  --accent: #e4002b; /* Cherry — the loud colour */
   --accent-dark: #b4001f; /* Cherry, darkened for hover/pressed */
+  --accent-2: #f2a93b; /* Marigold — the second loud colour, for stickers/badges */
   --stem: #14372b; /* Stem — tiny details only, never a large field */
-  --muted: #767676;
-  --card: #f4f1ec; /* Bone — secondary surface, never the page ground */
-  --border: #e4e0d8;
+  --muted: #8a7a68;
+  --card: #f4e6cd; /* Oat — secondary surface, one notch warmer than ground */
+  --border: #e6d3ae;
 }
 
 @theme inline {
@@ -17,6 +18,7 @@
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-accent-dark: var(--accent-dark);
+  --color-accent-2: var(--accent-2);
   --color-stem: var(--stem);
   --color-muted: var(--muted);
   --color-card: var(--card);
@@ -28,4 +30,72 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  background-image: radial-gradient(
+    color-mix(in srgb, var(--foreground) 5%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 18px 18px;
+}
+
+/* Sticker: a rotated, hard-edged badge for callouts */
+.sticker {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 2px solid var(--foreground);
+  padding: 0.35rem 0.9rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  background: var(--accent-2);
+  color: var(--foreground);
+  transform: rotate(-4deg);
+}
+
+/* Hard shadow: a tactile, offset "pop" shadow used on buttons and cards */
+.pop {
+  box-shadow: 4px 4px 0 0 var(--foreground);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.pop:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 0 var(--foreground);
+}
+.pop:active {
+  transform: translate(0, 0);
+  box-shadow: 2px 2px 0 0 var(--foreground);
+}
+
+.tilt-left {
+  transform: rotate(-2deg);
+}
+.tilt-right {
+  transform: rotate(2deg);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 22s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  .pop,
+  .pop:hover,
+  .pop:active {
+    transition: none;
+    transform: none;
+  }
 }

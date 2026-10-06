@@ -55,13 +55,13 @@ export default function YinRsvpForm() {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+          className="w-full rounded-lg border-2 border-foreground bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
         />
       </div>
       <button
         type="submit"
         disabled={status === "loading"}
-        className="self-start rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent-dark disabled:opacity-60"
+        className="pop self-start rounded-full border-2 border-foreground bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent-dark disabled:opacity-60"
       >
         {status === "loading" ? "Reserving..." : "Reserve my spot"}
       </button>

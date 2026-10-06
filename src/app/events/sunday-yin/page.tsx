@@ -63,7 +63,7 @@ export default function SundayYinEventPage() {
           </p>
           <a
             href="#reserve"
-            className="mt-6 inline-block rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent-dark"
+            className="pop mt-6 inline-block rounded-full border-2 border-foreground bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent-dark"
           >
             Reserve my spot
           </a>

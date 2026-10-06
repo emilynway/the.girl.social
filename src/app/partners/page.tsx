@@ -8,7 +8,8 @@ export const metadata: Metadata = {
 export default function PartnersPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
-      <h1 className="font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
+      <span className="sticker tilt-left">Let&apos;s work together</span>
+      <h1 className="mt-4 font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
         Partner with The Girl Social
       </h1>
       <p className="mt-4 max-w-2xl text-muted">
