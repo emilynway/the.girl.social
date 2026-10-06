@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import YinRsvpForm from "@/components/YinRsvpForm";
 
 export const metadata: Metadata = {
@@ -37,27 +38,45 @@ const plan = [
 export default function SundayYinEventPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
-      <h1 className="font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
-        In for some yin?
-      </h1>
-      <p className="mt-4 max-w-2xl text-muted">
-        This Sunday, we&apos;re getting together with{" "}
-        <a
-          href="https://www.instagram.com/studio13oslo"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline decoration-border underline-offset-4 hover:text-accent"
-        >
-          Studio13
-        </a>{" "}
-        for a free yin class, generously gifted to Oslo Girl Social by their
-        female-founded, female-run gym 💘
-      </p>
-      <p className="mt-4 max-w-2xl text-muted">
-        Come meet some new gals, get in some movement and have a chill Sunday
-        moment together. No experience needed. Spots are limited, so reserve
-        yours below 💘
-      </p>
+      <div className="grid gap-10 sm:grid-cols-2 sm:items-center">
+        <div>
+          <h1 className="font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
+            In for some yin?
+          </h1>
+          <p className="mt-4 max-w-2xl text-muted">
+            This Sunday, we&apos;re getting together with{" "}
+            <a
+              href="https://www.instagram.com/studio13oslo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-border underline-offset-4 hover:text-accent"
+            >
+              Studio13
+            </a>{" "}
+            for a free yin class, generously gifted to Oslo Girl Social by their
+            female-founded, female-run gym 💘
+          </p>
+          <p className="mt-4 max-w-2xl text-muted">
+            Come meet some new gals, get in some movement and have a chill
+            Sunday moment together. No experience needed. Spots are limited, so
+            reserve yours below 💘
+          </p>
+          <a
+            href="#reserve"
+            className="mt-6 inline-block rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent-dark"
+          >
+            Reserve my spot
+          </a>
+        </div>
+        <Image
+          src="/events/sunday-yin/downward-dog.webp"
+          alt="Black and white photo of a woman in downward dog on a yoga mat"
+          width={1740}
+          height={1160}
+          className="w-full rounded-2xl object-cover"
+          priority
+        />
+      </div>
 
       <dl className="mt-10 grid gap-6 border-y border-border py-8 sm:grid-cols-4">
         {details.map((item) => (
