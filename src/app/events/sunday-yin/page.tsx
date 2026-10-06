@@ -28,9 +28,9 @@ const plan = [
     body: "We'll stroll over to Studio13 as a group, the perfect time to get to know each other.",
   },
   {
-    time: "Yin",
-    title: "Free yin class at Studio13",
-    body: "Trondheimsveien 135, 0570 Oslo. Stretch, breathe and unwind.",
+    time: "13:00",
+    title: "Free yin class starts",
+    body: "Studio13, Trondheimsveien 135, 0570 Oslo. Stretch, breathe and unwind.",
     href: "https://maps.google.com/?q=Studio+13,+Trondheimsveien+135,+0570+Oslo",
   },
 ];
