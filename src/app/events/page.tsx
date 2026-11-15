@@ -38,7 +38,11 @@ export default function EventsPage() {
         Come alone, most people do.
       </h1>
       <p className="mt-4 max-w-2xl text-muted">
-        Have an idea for an event you&apos;d like to host? Send me an email at{" "}
+        Your new friends are planning things, all you need to do is show up
+        and be willing to say hello 🙂
+      </p>
+      <p className="mt-3 max-w-2xl text-sm text-muted">
+        Have an idea for an event you&apos;d like to host? Email{" "}
         <a
           href="mailto:emily@thegirlsocial.com"
           className="underline decoration-border underline-offset-4 hover:text-accent"
