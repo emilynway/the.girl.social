@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Media | The Girl Social",
 };
 
-// Unpublished for now (press links live on /about) — flip this to true to
+// Unpublished for now (press links live on /about), flip this to true to
 // bring the page back.
 const MEDIA_PAGE_ENABLED = false;
 
