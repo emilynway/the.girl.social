@@ -5,75 +5,73 @@ import FounderStory from "@/components/FounderStory";
 export default function Home() {
   return (
     <div>
-      <section className="mx-auto max-w-5xl px-6 py-24 sm:py-32">
-        <span className="sticker tilt-left">Est. in Oslo</span>
-        <h1 className="mt-5 max-w-2xl font-serif text-4xl font-black uppercase leading-[0.96] tracking-[-0.035em] sm:text-5xl">
+      <section className="mx-auto max-w-3xl px-6 pb-24 pt-20 text-center sm:pb-32 sm:pt-28">
+        <span className="tag">Est. in Oslo</span>
+        <h1 className="mt-8 font-serif text-5xl font-normal leading-[1.08] tracking-[-0.02em] sm:text-6xl">
           Building a life in Oslo hits different with your people around.
         </h1>
-        <p className="mt-6 max-w-xl text-lg text-muted">
+        <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-muted">
           We&apos;re the social club making that part easier — real-life
           meetups, real friendships, and yes, occasional small talk about
           the weather.
         </p>
-        <div className="mt-8">
+        <div className="mt-10 flex justify-center">
           <NewsletterForm />
         </div>
       </section>
 
-      <section className="border-y-2 border-foreground bg-card">
-        <div className="mx-auto grid max-w-5xl gap-8 px-6 py-16 sm:grid-cols-2">
-          <div className="rounded-2xl border-2 border-foreground bg-background p-6 pop tilt-left">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+      <section className="border-y border-border">
+        <div className="mx-auto grid max-w-4xl gap-12 px-6 py-20 text-center sm:grid-cols-2 sm:gap-16">
+          <div>
+            <h2 className="font-serif text-2xl font-normal tracking-[-0.01em]">
               Real-life events
             </h2>
-            <p className="mt-2 text-sm text-muted">
+            <p className="mx-auto mt-3 max-w-xs text-muted">
               Monthly meetups, workshops, and socials around Oslo. IRL, not
               just in the group chat.
             </p>
           </div>
-          <div className="rounded-2xl border-2 border-foreground bg-background p-6 pop">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+          <div>
+            <h2 className="font-serif text-2xl font-normal tracking-[-0.01em]">
               A genuine community
             </h2>
-            <p className="mt-2 text-sm text-muted">
+            <p className="mx-auto mt-3 max-w-xs text-muted">
               Meet women who get what it&apos;s like building a life here.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
-        <span className="sticker tilt-right">Find your fit</span>
-        <h2 className="mt-4 max-w-lg font-serif text-2xl font-black uppercase leading-tight tracking-[-0.025em] sm:text-3xl">
+      <section className="mx-auto max-w-2xl px-6 py-24 text-center sm:py-32">
+        <span className="tag">Find your fit</span>
+        <h2 className="mt-6 font-serif text-4xl font-normal leading-tight tracking-[-0.015em] sm:text-5xl">
           What kind of Oslo Girl are you?
         </h2>
-        <p className="mt-3 max-w-xl text-muted">
+        <p className="mx-auto mt-5 max-w-md text-muted">
           Three quick questions to figure out which of our events you&apos;ll
           love first.
         </p>
-        <div className="mt-8">
+        <div className="mt-10 text-left">
           <VibeQuiz />
         </div>
       </section>
 
-      <section className="border-y-2 border-foreground bg-card">
-        <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
+      <section className="border-y border-border bg-card">
+        <div className="mx-auto max-w-2xl px-6 py-24 text-center sm:py-28">
           <FounderStory />
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
-        <div className="rounded-2xl border-2 border-foreground bg-card p-8 pop sm:p-10">
-          <span className="sticker">Don&apos;t miss the next one</span>
-          <h2 className="mt-4 font-serif text-xl font-black uppercase tracking-[-0.025em] sm:text-2xl">
-            Stay in the loop
-          </h2>
-          <p className="mt-2 max-w-md text-sm text-muted">
-            First word on new meetups, workshops, and members-only news.
-          </p>
-          <div className="mt-6">
-            <NewsletterForm />
-          </div>
+      <section className="mx-auto max-w-2xl px-6 py-24 text-center sm:py-32">
+        <span className="tag">Don&apos;t miss the next one</span>
+        <h2 className="mt-6 font-serif text-4xl font-normal tracking-[-0.015em] sm:text-5xl">
+          Stay in the loop
+        </h2>
+        <p className="mx-auto mt-5 max-w-md text-muted">
+          First word on new meetups, workshops, and members-only news.
+        </p>
+        <div className="mt-8 flex justify-center">
+          <NewsletterForm />
         </div>
       </section>
     </div>

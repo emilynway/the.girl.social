@@ -28,7 +28,7 @@ const pressLinks: { publication: string; title: string; url: string }[] = [
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
-      <h1 className="font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
+      <h1 className="font-serif text-3xl font-normal tracking-[-0.015em] sm:text-4xl">
         Why I started this
       </h1>
       <div className="mt-8 flex flex-col gap-4 max-w-2xl text-muted">
@@ -76,7 +76,7 @@ export default function AboutPage() {
           alt="A big group of Oslo Girl Social members together on the grass in an autumn park"
           width={870}
           height={572}
-          className="w-full rounded-2xl object-cover"
+          className="w-full rounded-xl object-cover"
         />
         <figcaption className="mt-3 text-sm text-muted">
           Just some of the amazing women who make Oslo Girl Social what it is.
@@ -84,7 +84,7 @@ export default function AboutPage() {
       </figure>
 
       <div className="mt-16">
-        <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+        <h2 className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
           In the news
         </h2>
         <ul className="mt-4 flex flex-col gap-3 text-sm">

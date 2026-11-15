@@ -45,7 +45,7 @@ export default function SundayYinEventPage() {
     <div className="mx-auto max-w-5xl px-6 py-20">
       <div className="grid gap-10 sm:grid-cols-2 sm:items-center">
         <div>
-          <h1 className="font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
+          <h1 className="font-serif text-3xl font-normal tracking-[-0.015em] sm:text-4xl">
             In for some yin?
           </h1>
           <p className="mt-4 max-w-2xl text-muted">
@@ -70,7 +70,7 @@ export default function SundayYinEventPage() {
           </p>
           <a
             href="#reserve"
-            className="pop mt-6 inline-block rounded-full border-2 border-foreground bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent-dark"
+            className="mt-6 inline-block rounded-lg bg-foreground px-6 py-3 text-sm font-medium text-background transition hover:bg-foreground/80"
           >
             {FULL ? "Join the waitlist" : "Reserve my spot"}
           </a>
@@ -80,7 +80,7 @@ export default function SundayYinEventPage() {
           alt="Black and white photo of a woman in downward dog on a yoga mat"
           width={1740}
           height={1160}
-          className="w-full rounded-2xl object-cover"
+          className="w-full rounded-xl object-cover"
           priority
         />
       </div>
@@ -88,7 +88,7 @@ export default function SundayYinEventPage() {
       <dl className="mt-10 grid gap-6 border-y border-border py-8 sm:grid-cols-4">
         {details.map((item) => (
           <div key={item.label}>
-            <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            <dt className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
               {item.label}
             </dt>
             <dd className="mt-1 text-sm">{item.value}</dd>
@@ -98,13 +98,13 @@ export default function SundayYinEventPage() {
 
       <div className="mt-10 grid gap-10 sm:grid-cols-2">
         <div>
-          <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+          <h2 className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
             The plan
           </h2>
           <ol className="mt-4 flex flex-col gap-5 text-sm">
             {plan.map((step) => (
               <li key={step.time} className="flex gap-4">
-                <span className="w-14 shrink-0 font-serif font-black text-accent">
+                <span className="w-14 shrink-0 font-serif font-normal text-accent">
                   {step.time}
                 </span>
                 <div>
@@ -128,7 +128,7 @@ export default function SundayYinEventPage() {
             ))}
           </ol>
 
-          <h2 className="mt-10 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+          <h2 className="mt-10 text-xs font-medium uppercase tracking-[0.14em] text-muted">
             What to bring
           </h2>
           <ul className="mt-4 flex flex-col gap-3 text-sm text-muted">
@@ -138,7 +138,7 @@ export default function SundayYinEventPage() {
           </ul>
         </div>
         <div id="reserve">
-          <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+          <h2 className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
             {FULL ? "Join the waitlist" : "Reserve your spot"}
           </h2>
           <p className="mt-4 text-sm text-muted">

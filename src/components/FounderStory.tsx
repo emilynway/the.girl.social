@@ -5,11 +5,11 @@ import Link from "next/link";
 export default function FounderStory() {
   return (
     <div>
-      <span className="sticker tilt-right">Meet the founder</span>
-      <h2 className="mt-4 font-serif text-2xl font-black uppercase tracking-[-0.025em] sm:text-3xl">
+      <span className="tag">Meet the founder</span>
+      <h2 className="mt-6 font-serif text-4xl font-normal tracking-[-0.015em] sm:text-5xl">
         Hi, I&apos;m Emily
       </h2>
-      <p className="mt-4 max-w-xl text-muted">
+      <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted">
         I&apos;ve moved a lot, so I know what it&apos;s like to build your
         circle from scratch. When a knee injury took me off my runs, I started
         walking instead, and I&apos;d learned how much community matters too.
@@ -20,7 +20,7 @@ export default function FounderStory() {
       </p>
       <Link
         href="/about"
-        className="mt-6 inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent underline decoration-2 underline-offset-4 hover:text-accent-dark"
+        className="mt-8 inline-block text-sm font-medium underline decoration-1 underline-offset-4 transition hover:text-muted"
       >
         Read the full story
       </Link>

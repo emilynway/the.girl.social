@@ -18,7 +18,7 @@ export default function TarotReadingEventPage() {
     <div className="mx-auto max-w-5xl px-6 py-20">
       <div className="grid gap-10 sm:grid-cols-2 sm:items-center">
         <div>
-          <h1 className="font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
+          <h1 className="font-serif text-3xl font-normal tracking-[-0.015em] sm:text-4xl">
             The Journey Within: Personal Growth Through Tarot
           </h1>
           <p className="mt-4 max-w-2xl text-muted">
@@ -32,7 +32,7 @@ export default function TarotReadingEventPage() {
           alt="A tarot card spread laid out on a table during a reading"
           width={564}
           height={846}
-          className="w-full max-w-sm justify-self-center rounded-2xl object-cover sm:justify-self-end"
+          className="w-full max-w-sm justify-self-center rounded-xl object-cover sm:justify-self-end"
           priority
         />
       </div>
@@ -40,7 +40,7 @@ export default function TarotReadingEventPage() {
       <dl className="mt-10 grid gap-6 border-y border-border py-8 sm:grid-cols-4">
         {details.map((item) => (
           <div key={item.label}>
-            <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            <dt className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
               {item.label}
             </dt>
             <dd className="mt-1 text-sm">{item.value}</dd>
@@ -50,7 +50,7 @@ export default function TarotReadingEventPage() {
 
       <div className="mt-10 grid gap-10 sm:grid-cols-2">
         <div>
-          <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+          <h2 className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
             What to expect
           </h2>
           <ul className="mt-4 flex flex-col gap-3 text-sm text-muted">
@@ -70,7 +70,7 @@ export default function TarotReadingEventPage() {
           </ul>
         </div>
         <div>
-          <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+          <h2 className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
             Reserve your spot
           </h2>
           <div className="mt-4">
@@ -80,7 +80,7 @@ export default function TarotReadingEventPage() {
       </div>
 
       <div className="mt-16 border-t border-border pt-10">
-        <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+        <h2 className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
           About Melissa
         </h2>
         <div className="mt-4 flex flex-col gap-6 sm:flex-row">

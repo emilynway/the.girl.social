@@ -36,14 +36,14 @@ export default function NewsletterForm() {
 
   if (status === "success") {
     return (
-      <p className="text-accent-dark font-medium">
+      <p className="text-center font-medium">
         You&apos;re on the list. Welcome to The Girl Social! 🎉
       </p>
     );
   }
 
   return (
-    <div className="w-full max-w-md">
+    <div className="mx-auto w-full max-w-md">
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
         <input
           type="email"
@@ -51,12 +51,12 @@ export default function NewsletterForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@email.com"
-          className="flex-1 rounded-full border-2 border-foreground bg-background px-5 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+          className="flex-1 rounded-lg border border-border bg-background px-5 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
         />
         <button
           type="submit"
           disabled={status === "loading"}
-          className="pop rounded-full border-2 border-foreground bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent-dark disabled:opacity-60"
+          className="rounded-lg bg-foreground px-6 py-3 text-sm font-medium text-background transition hover:bg-foreground/80 disabled:opacity-60"
         >
           {status === "loading" ? "Joining..." : "Join the list"}
         </button>

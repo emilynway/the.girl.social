@@ -91,9 +91,9 @@ export default function VibeQuiz() {
     const result = personas[winner];
 
     return (
-      <div className="pop rounded-2xl border-2 border-foreground bg-accent-2 p-8 sm:p-10">
-        <span className="sticker bg-background">Your result</span>
-        <h3 className="mt-4 font-serif text-2xl font-black uppercase tracking-[-0.025em] sm:text-3xl">
+      <div className="rounded-xl border border-border bg-soft p-8 sm:p-10">
+        <span className="tag bg-background">Your result</span>
+        <h3 className="mt-4 font-serif text-2xl font-normal tracking-[-0.015em] sm:text-3xl">
           {result.name}
         </h3>
         <p className="mt-3 max-w-xl text-foreground/80">{result.description}</p>
@@ -101,7 +101,7 @@ export default function VibeQuiz() {
           <NewsletterForm />
           <button
             onClick={handleRestart}
-            className="text-xs font-semibold uppercase tracking-[0.2em] underline underline-offset-4 hover:text-accent"
+            className="text-xs font-medium uppercase tracking-[0.2em] underline underline-offset-4 hover:text-accent"
           >
             Retake quiz
           </button>
@@ -113,11 +113,11 @@ export default function VibeQuiz() {
   const question = questions[step];
 
   return (
-    <div className="pop rounded-2xl border-2 border-foreground bg-card p-8 sm:p-10">
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+    <div className="rounded-xl border border-border bg-card p-8 sm:p-10">
+      <p className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
         Question {step + 1} of {questions.length}
       </p>
-      <h3 className="mt-2 font-serif text-xl font-black uppercase tracking-[-0.025em] sm:text-2xl">
+      <h3 className="mt-2 font-serif text-xl font-normal tracking-[-0.015em] sm:text-2xl">
         {question.prompt}
       </h3>
       <div className="mt-6 flex flex-col gap-3">
@@ -125,7 +125,7 @@ export default function VibeQuiz() {
           <button
             key={option.label}
             onClick={() => handleAnswer(option.persona)}
-            className="rounded-xl border-2 border-foreground bg-background px-5 py-3 text-left text-sm transition hover:-translate-y-0.5 hover:bg-accent-2"
+            className="rounded-xl border border-border bg-background px-5 py-3 text-left text-sm transition hover:-translate-y-0.5 hover:bg-soft"
           >
             {option.label}
           </button>

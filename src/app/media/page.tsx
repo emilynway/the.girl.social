@@ -55,8 +55,8 @@ export default function MediaPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
-      <span className="sticker tilt-left">As seen in</span>
-      <h1 className="mt-4 font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
+      <span className="tag">As seen in</span>
+      <h1 className="mt-4 font-serif text-3xl font-normal tracking-[-0.015em] sm:text-4xl">
         Media
       </h1>
       <p className="mt-4 max-w-2xl text-muted">
@@ -64,23 +64,21 @@ export default function MediaPage() {
       </p>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2">
-        {press.map((item, i) => (
+        {press.map((item) => (
           <a
             key={item.href}
             href={item.href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`pop flex flex-col rounded-2xl border-2 border-foreground bg-card p-6 transition hover:bg-accent-2 ${
-              i % 2 === 0 ? "tilt-left" : "tilt-right"
-            }`}
+            className="flex flex-col rounded-xl border border-border bg-card p-6 transition hover:bg-soft"
           >
             <div className="flex items-center justify-between gap-3">
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              <span className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
                 {item.outlet}
               </span>
               <span className="text-xs text-muted">{item.date}</span>
             </div>
-            <h2 className="mt-3 font-serif text-lg font-black leading-snug tracking-[-0.015em]">
+            <h2 className="mt-3 font-serif text-lg font-normal leading-snug tracking-[-0.01em]">
               {item.headline}
             </h2>
             <p className="mt-3 flex-1 text-sm italic text-muted">
@@ -88,7 +86,7 @@ export default function MediaPage() {
             </p>
             <div className="mt-4 flex items-center justify-between text-xs text-muted">
               {item.language ? <span>In {item.language}</span> : <span />}
-              <span className="font-semibold uppercase tracking-[0.15em] text-accent">
+              <span className="font-semibold uppercase tracking-[0.14em] text-muted">
                 Read article ↗
               </span>
             </div>

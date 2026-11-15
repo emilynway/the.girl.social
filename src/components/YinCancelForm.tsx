@@ -55,13 +55,13 @@ export default function YinCancelForm() {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full rounded-lg border-2 border-foreground bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+          className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
         />
       </div>
       <button
         type="submit"
         disabled={status === "loading"}
-        className="pop self-start rounded-full border-2 border-foreground bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-accent-dark disabled:opacity-60"
+        className="self-start rounded-lg bg-foreground px-6 py-3 text-sm font-medium text-background transition hover:bg-foreground/80 disabled:opacity-60"
       >
         {status === "loading" ? "Sending..." : "Give my spot away"}
       </button>

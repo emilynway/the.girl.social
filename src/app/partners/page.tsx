@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 export default function PartnersPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
-      <span className="sticker tilt-left">Let&apos;s work together</span>
-      <h1 className="mt-4 font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
+      <span className="tag">Let&apos;s work together</span>
+      <h1 className="mt-4 font-serif text-3xl font-normal tracking-[-0.015em] sm:text-4xl">
         Partner with The Girl Social
       </h1>
       <p className="mt-4 max-w-2xl text-muted">
@@ -21,7 +21,7 @@ export default function PartnersPage() {
 
       <div className="mt-10 grid gap-10 sm:grid-cols-2">
         <div>
-          <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+          <h2 className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
             What partnership can look like
           </h2>
           <ul className="mt-4 flex flex-col gap-3 text-sm text-muted">
@@ -32,7 +32,7 @@ export default function PartnersPage() {
           </ul>
         </div>
         <div>
-          <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+          <h2 className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
             Tell us about your business
           </h2>
           <div className="mt-4">

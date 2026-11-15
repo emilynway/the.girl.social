@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function SundayYinCancelPage() {
   return (
     <div className="mx-auto max-w-2xl px-6 py-20">
-      <h1 className="font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
+      <h1 className="font-serif text-3xl font-normal tracking-[-0.015em] sm:text-4xl">
         Can&apos;t make it?
       </h1>
       <p className="mt-4 text-muted">

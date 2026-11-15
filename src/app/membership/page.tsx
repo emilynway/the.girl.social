@@ -48,7 +48,7 @@ export default function MembershipPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
-      <h1 className="font-serif text-3xl font-black uppercase tracking-[-0.035em] sm:text-4xl">
+      <h1 className="font-serif text-3xl font-normal tracking-[-0.015em] sm:text-4xl">
         Membership options
       </h1>
       <p className="mt-4 max-w-2xl text-muted">
@@ -57,17 +57,17 @@ export default function MembershipPage() {
       </p>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-3">
-        {tiers.map((tier, i) => (
+        {tiers.map((tier) => (
           <div
             key={tier.name}
-            className={`pop flex flex-col rounded-2xl border-2 border-foreground p-6 ${
-              tier.highlighted ? "bg-accent-2" : "bg-card"
-            } ${i % 2 === 0 ? "tilt-left" : "tilt-right"}`}
+            className={`flex flex-col rounded-xl border border-border p-6 ${
+              tier.highlighted ? "bg-soft" : "bg-card"
+            }`}
           >
-            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            <h2 className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
               {tier.name}
             </h2>
-            <p className="mt-1 font-serif text-2xl font-black">{tier.price}</p>
+            <p className="mt-1 font-serif text-2xl font-normal">{tier.price}</p>
             <p className="mt-2 text-sm text-muted">{tier.description}</p>
             <ul className="mt-4 flex flex-col gap-2 text-sm">
               {tier.features.map((feature) => (
@@ -81,8 +81,8 @@ export default function MembershipPage() {
         ))}
       </div>
 
-      <div className="mt-16 rounded-2xl border-2 border-foreground bg-card p-8 pop">
-        <h2 className="font-serif text-xl font-black uppercase tracking-[-0.025em]">
+      <div className="mt-16 rounded-xl border border-border bg-card p-8">
+        <h2 className="font-serif text-xl font-normal tracking-[-0.015em]">
           Be first to know when membership opens
         </h2>
         <div className="mt-4">
