@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import EventsCalendar from "@/components/EventsCalendar";
+import MaybeLink from "@/components/MaybeLink";
 import NewsletterForm from "@/components/NewsletterForm";
 import { events, sortedEvents, todayInOslo } from "@/lib/events";
 
@@ -53,9 +53,9 @@ export default function EventsPage() {
           <ul className="mt-4 grid gap-4 sm:grid-cols-2">
             {upcoming.map((e) => (
               <li key={e.slug}>
-                <Link
+                <MaybeLink
                   href={e.href}
-                  className="block h-full rounded-xl border border-border p-6 transition hover:bg-card"
+                  className="block h-full rounded-xl border border-border p-6 transition [a&]:hover:bg-card"
                 >
                   <p className="text-sm text-accent">
                     {formatDate(e.date)} · {e.start}
@@ -66,9 +66,9 @@ export default function EventsPage() {
                   </p>
                   <p className="mt-2 text-sm text-muted">{e.blurb}</p>
                   <p className="mt-4 text-xs text-muted">
-                    {e.where} · {e.price}
+                    {e.price ? `${e.where} · ${e.price}` : e.where}
                   </p>
-                </Link>
+                </MaybeLink>
               </li>
             ))}
           </ul>
@@ -103,14 +103,14 @@ export default function EventsPage() {
           <ul className="mt-4 flex flex-col divide-y divide-border border-y border-border">
             {past.map((e) => (
               <li key={e.slug}>
-                <Link
+                <MaybeLink
                   href={e.href}
-                  className="flex flex-col gap-1 py-4 text-muted transition hover:text-foreground sm:flex-row sm:items-baseline sm:gap-6"
+                  className="flex flex-col gap-1 py-4 text-muted transition sm:flex-row sm:items-baseline sm:gap-6 [a&]:hover:text-foreground"
                 >
                   <span className="w-32 shrink-0 text-sm">{formatDate(e.date)}</span>
                   <span className="font-medium text-foreground">{e.title}</span>
                   <span className="text-sm sm:ml-auto">{e.where}</span>
-                </Link>
+                </MaybeLink>
               </li>
             ))}
           </ul>

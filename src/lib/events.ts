@@ -8,10 +8,11 @@ export type EventItem = {
   end?: string;
   /** Short place name; exact address stays on the event page where needed */
   where: string;
-  price: string;
+  /** Leave out when there is no price to show */
+  price?: string;
   blurb: string;
-  /** Event page on this site, or an external ticket link */
-  href: string;
+  /** Event page on this site, or an external ticket link. Leave out if there is no page. */
+  href?: string;
 };
 
 /**
@@ -45,6 +46,70 @@ export const events: EventItem[] = [
     blurb:
       "Coffee at Kuro, a walk to the studio together, then a free yin class gifted by Studio13.",
     href: "/events/sunday-yin",
+  },
+  {
+    slug: "board-game-meetup-3",
+    title: "Board Game Meetup #3",
+    date: "2026-09-02",
+    start: "19:00",
+    where: "Spilloteket, Kongens gate 7",
+    price: "70 kr (50 kr students)",
+    blurb: "Easy, social board games and a chance to meet new people.",
+  },
+  {
+    slug: "board-game-meetup-4",
+    title: "Board Game Meetup #4",
+    date: "2026-09-17",
+    start: "18:00",
+    where: "Spilloteket, Kongens gate 7",
+    price: "70 kr (50 kr students)",
+    blurb: "Easy, social board games and a chance to meet new people.",
+  },
+  {
+    slug: "clothing-swap-kulturhuset",
+    title: "Clothing swap at Kulturhuset",
+    date: "2026-11-04",
+    start: "18:00",
+    where: "Kulturhuset, Oslo",
+    blurb:
+      "A swap hosted by a community member, with room for an upcycle corner for ideas on fixing and reworking old pieces.",
+  },
+  {
+    slug: "board-game-meetup-5",
+    title: "Board Game Meetup #5",
+    date: "2026-10-01",
+    start: "18:00",
+    where: "Spilloteket, Kongens gate 7",
+    price: "70 kr (50 kr students)",
+    blurb: "Easy, social board games and a chance to meet new people.",
+  },
+  {
+    slug: "board-game-meetup-6",
+    title: "Board Game Meetup #6",
+    date: "2026-10-15",
+    start: "18:00",
+    where: "Spilloteket, Kongens gate 7",
+    price: "70 kr (50 kr students)",
+    blurb: "Easy, social board games and a chance to meet new people.",
+  },
+  {
+    slug: "board-game-meetup-7",
+    title: "Board Game Meetup #7",
+    date: "2026-10-29",
+    start: "18:00",
+    where: "Spilloteket, Kongens gate 7",
+    price: "70 kr (50 kr students)",
+    blurb: "Easy, social board games and a chance to meet new people.",
+  },
+  {
+    slug: "board-game-meetup-8",
+    title: "Board Game Meetup #8",
+    date: "2026-11-19",
+    start: "18:00",
+    where: "Spilloteket, Kongens gate 7",
+    price: "70 kr (50 kr students)",
+    blurb:
+      "Easy, social board games and a chance to make new friends. Entry is paid at the bar, and you can bring your own food.",
   },
 ];
 

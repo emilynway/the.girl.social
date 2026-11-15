@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
+import MaybeLink from "@/components/MaybeLink";
 import type { EventItem } from "@/lib/events";
 
 const WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -148,7 +148,7 @@ export default function EventsCalendar({
                       {dayEvents.map((e) => {
                         const past = e.date < today;
                         return (
-                          <Link
+                          <MaybeLink
                             key={e.slug}
                             href={e.href}
                             title={`${e.title}, ${formatTime(e)}`}
@@ -161,7 +161,7 @@ export default function EventsCalendar({
                             <span className="block font-medium">{e.start}</span>
                             <span className="hidden sm:block">{e.title}</span>
                             <span className="sr-only sm:hidden">{e.title}</span>
-                          </Link>
+                          </MaybeLink>
                         );
                       })}
                     </div>
@@ -185,16 +185,16 @@ export default function EventsCalendar({
           <ul className="mt-4 flex flex-col divide-y divide-border border-y border-border">
             {monthEvents.map((e) => (
               <li key={e.slug}>
-                <Link
+                <MaybeLink
                   href={e.href}
-                  className="flex flex-col gap-1 py-4 transition hover:text-accent sm:flex-row sm:items-baseline sm:gap-6"
+                  className="flex flex-col gap-1 py-4 transition sm:flex-row sm:items-baseline sm:gap-6 [a&]:hover:text-accent"
                 >
                   <span className="w-56 shrink-0 text-sm text-muted">
                     {formatDay(e.date)} · {formatTime(e)}
                   </span>
                   <span className="font-medium">{e.title}</span>
                   <span className="text-sm text-muted sm:ml-auto">{e.where}</span>
-                </Link>
+                </MaybeLink>
               </li>
             ))}
           </ul>
