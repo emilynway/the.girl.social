@@ -125,11 +125,11 @@ export const events: EventItem[] = [
     slug: "sognsvann-walk-2026-11-28",
     title: "Sognsvann walk with Emma",
     date: "2026-11-28",
-    start: "Time TBC",
-    where: "Sognsvann",
+    start: "11:30",
+    where: "Sognsvann T-bane",
     price: "Free",
     blurb:
-      "A loop around Sognsvann led by community lead Emma. Dress warm and wear good shoes, the path can be icy.",
+      "A loop around Sognsvann led by community lead Emma, meeting at Sognsvann T-bane station (line 5). Dress warm and wear good shoes, the path can be icy.",
   },
   {
     slug: "akerselva-walk-2026-12-05",
