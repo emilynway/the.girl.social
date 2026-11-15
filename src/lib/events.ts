@@ -132,6 +132,34 @@ export const events: EventItem[] = [
       "A loop around Sognsvann led by community lead Emma, meeting at Sognsvann T-bane station (line 5). Dress warm and wear good shoes, the path can be icy.",
   },
   {
+    slug: "book-club-2026-11-22",
+    title: "Book club: The Days of Abandonment",
+    date: "2026-11-22",
+    start: "Time TBC",
+    where: "Place shared in the Book club group",
+    blurb:
+      "This month we're discussing The Days of Abandonment by Elena Ferrante, with an optional ornament-painting session afterwards. Seats are limited, so reserve yours via the Book club WhatsApp group.",
+  },
+  {
+    slug: "girly-board-games-2026-11-24",
+    title: "Girly Board Games Night (full)",
+    date: "2026-11-24",
+    start: "17:30",
+    where: "At a member's home",
+    blurb:
+      "Sherlock Holmes Consulting Detective and story games with Kay. This one has reached capacity, but keep an eye on the Board and Card Games group for the next one.",
+  },
+  {
+    slug: "iconapopquiz-2026-11-26",
+    title: "IconaPopQuiz at Kulturhuset",
+    date: "2026-11-26",
+    start: "18:45",
+    end: "21:30",
+    where: "Kulturhuset, Youngs gate 6",
+    blurb:
+      "A pub quiz packed with pop culture: celebrity drama, film and TV trivia, music and more. Join the team via the Let's go to a quiz WhatsApp group.",
+  },
+  {
     slug: "akerselva-walk-2026-12-05",
     title: "River walk to Mathallen with Julie",
     date: "2026-12-05",
