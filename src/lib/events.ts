@@ -111,6 +111,26 @@ export const events: EventItem[] = [
     blurb:
       "Easy, social board games and a chance to make new friends. Entry is paid at the bar, and you can bring your own food.",
   },
+  {
+    slug: "akerselva-walk-2026-11-21",
+    title: "Akerselva walk with Karine & Ioana",
+    date: "2026-11-21",
+    start: "10:00",
+    where: "Nydalen",
+    price: "Free",
+    blurb:
+      "Our first walk led by community leads Karine and Ioana: from Nydalen along Akerselva down to the bottom of Grünerløkka. Bring a warm drink or grab one at Nydalen before we start.",
+  },
+  {
+    slug: "sognsvann-walk-2026-11-28",
+    title: "Sognsvann walk with Emma",
+    date: "2026-11-28",
+    start: "Time TBC",
+    where: "Sognsvann",
+    price: "Free",
+    blurb:
+      "A loop around Sognsvann led by community lead Emma. Dress warm and wear good shoes, the path can be icy.",
+  },
 ];
 
 export function sortedEvents(list: EventItem[] = events) {
