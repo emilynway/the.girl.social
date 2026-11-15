@@ -133,12 +133,12 @@ export const events: EventItem[] = [
   },
   {
     slug: "book-club-2026-11-22",
-    title: "Book club: The Days of Abandonment",
+    title: "Book club: The Days of Abandonment (full)",
     date: "2026-11-22",
     start: "Time TBC",
     where: "Place shared in the Book club group",
     blurb:
-      "This month we're discussing The Days of Abandonment by Elena Ferrante, with an optional ornament-painting session afterwards. Seats are limited, so reserve yours via the Book club WhatsApp group.",
+      "This month we're discussing The Days of Abandonment by Elena Ferrante, with an optional ornament-painting session afterwards. This month is fully booked, but join the Book club WhatsApp group to hear about the next one.",
   },
   {
     slug: "girly-board-games-2026-11-24",

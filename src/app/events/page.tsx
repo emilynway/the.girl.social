@@ -109,6 +109,20 @@ export default function EventsPage() {
 
       <section className="mt-16" aria-label="Calendar">
         <EventsCalendar events={all} today={today} />
+        <p className="mt-6 max-w-2xl text-sm text-muted">
+          Most of our events are planned and organised by community members.
+          You&apos;ll find more info, and plenty of spontaneous plans, in our
+          WhatsApp community. Not in it yet?{" "}
+          <a
+            href="https://www.instagram.com/oslogirlsocial/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-border underline-offset-4 hover:text-accent"
+          >
+            Send us a DM on Instagram
+          </a>{" "}
+          and we&apos;ll add you.
+        </p>
       </section>
 
       {past.length > 0 && (
