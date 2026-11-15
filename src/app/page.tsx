@@ -1,11 +1,12 @@
 import NewsletterForm from "@/components/NewsletterForm";
 import VibeQuiz from "@/components/VibeQuiz";
 import FounderStory from "@/components/FounderStory";
+import CommunityPhotos from "@/components/CommunityPhotos";
 
 export default function Home() {
   return (
     <div>
-      <section className="mx-auto max-w-3xl px-6 pb-24 pt-20 text-center sm:pb-32 sm:pt-28">
+      <section className="mx-auto max-w-3xl px-6 pb-14 pt-20 text-center sm:pb-20 sm:pt-28">
         <span className="tag">Est. in Oslo</span>
         <h1 className="mt-8 font-serif text-5xl font-normal leading-[1.08] tracking-[-0.02em] sm:text-6xl">
           Building a life in Oslo hits different with your people around.
@@ -19,6 +20,8 @@ export default function Home() {
           <NewsletterForm />
         </div>
       </section>
+
+      <CommunityPhotos />
 
       <section className="border-y border-border">
         <div className="mx-auto grid max-w-4xl gap-12 px-6 py-20 text-center sm:grid-cols-2 sm:gap-16">
