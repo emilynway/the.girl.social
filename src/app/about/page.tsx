@@ -28,6 +28,14 @@ const pressLinks: { publication: string; title: string; url: string }[] = [
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-20">
+      <Image
+        src="/about/emily.webp"
+        alt="Emily, founder of Oslo Girl Social, smiling in the sun"
+        width={600}
+        height={600}
+        preload
+        className="mb-8 h-28 w-28 rounded-full object-cover sm:h-32 sm:w-32"
+      />
       <h1 className="font-serif text-3xl font-normal tracking-[-0.015em] sm:text-4xl">
         Why I started this
       </h1>
