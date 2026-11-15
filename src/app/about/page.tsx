@@ -19,6 +19,11 @@ const pressLinks: { publication: string; title: string; url: string }[] = [
     url: "https://www.utrop.no/nyheter/ansikt-i-fokus/373910/",
   },
   {
+    publication: "Bendiksen Airways podcast",
+    title: "#114 Emily Northway (Emily in Oslo, expat)",
+    url: "https://podcasts.apple.com/nl/podcast/114-emily-northway-emily-in-oslo-expat/id1676226538?i=1000724326304&l=en-GB",
+  },
+  {
     publication: "Business Insider",
     title: "I Moved to Norway for Work. Being an American Has Helped Me Get Ahead.",
     url: "https://www.businessinsider.com/moving-to-norway-business-experience-american-expat-2023-8",
