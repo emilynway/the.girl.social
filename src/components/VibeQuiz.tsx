@@ -44,7 +44,7 @@ const personas: Record<PersonaId, { name: string; description: string }> = {
   newcomer: {
     name: "The Newcomer",
     description:
-      "Oslo is still revealing itself to you, and that's part of the fun. Start with our monthly meetups — low-pressure ways to meet other women building a life here.",
+      "Oslo is still revealing itself to you, and that's part of the fun. Start with our monthly meetups: low-pressure ways to meet other women building a life here.",
   },
   connector: {
     name: "The Connector",

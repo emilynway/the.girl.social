@@ -11,7 +11,7 @@ export default function Home() {
           Building a life in Oslo hits different with your people around.
         </h1>
         <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-muted">
-          We&apos;re the social club making that part easier — real-life
+          We&apos;re the social club making that part easier: real-life
           meetups, real friendships, and yes, occasional small talk about
           the weather.
         </p>

@@ -60,7 +60,7 @@ export default function MediaPage() {
         Media
       </h1>
       <p className="mt-4 max-w-2xl text-muted">
-        Where The Girl Social — and the story behind it — has been covered.
+        Where The Girl Social, and the story behind it, has been covered.
       </p>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2">

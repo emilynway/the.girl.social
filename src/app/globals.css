@@ -5,9 +5,9 @@
      Cherry kept only for small details, soft fjord blue for surfaces and tags. */
   --background: #ffffff;
   --foreground: #1b1b1b;
-  --accent: #e4002b; /* Cherry — small details only */
+  --accent: #e4002b; /* Cherry, small details only */
   --accent-dark: #b4001f;
-  --soft: #c9dff0; /* Fjord — soft surface for tags, highlights, quiz result */
+  --soft: #c9dff0; /* Fjord, soft surface for tags, highlights, quiz result */
   --stem: #14372b;
   --muted: #6f6f6f;
   --card: #f6f7f8;

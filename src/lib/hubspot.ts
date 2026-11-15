@@ -10,11 +10,11 @@ export class HubspotNotConfiguredError extends Error {
 /**
  * Submits a form to HubSpot's Forms API so entries show up as contacts/deals
  * in the HubSpot CRM. Requires HUBSPOT_PORTAL_ID and the given form's GUID
- * env var to be set — see .env.local.example.
+ * env var to be set, see .env.local.example.
  *
  * The account is hosted in HubSpot's EU data center, which uses a
  * region-specific API host (api-eu1.hsforms.com) instead of the default
- * api.hsforms.com — submissions silently fail against the wrong host.
+ * api.hsforms.com, so submissions silently fail against the wrong host.
  */
 export async function submitToHubspot(
   formGuidEnvVar: string,
