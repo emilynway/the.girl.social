@@ -131,6 +131,16 @@ export const events: EventItem[] = [
     blurb:
       "A loop around Sognsvann led by community lead Emma. Dress warm and wear good shoes, the path can be icy.",
   },
+  {
+    slug: "akerselva-walk-2026-12-05",
+    title: "River walk to Mathallen with Julie",
+    date: "2026-12-05",
+    start: "11:00",
+    where: "Nydalen T-bane",
+    price: "Free",
+    blurb:
+      "Community lead Julie leads the crew from outside Nydalen T-bane station, following the river downhill and ending with coffee at Mathallen.",
+  },
 ];
 
 export function sortedEvents(list: EventItem[] = events) {
