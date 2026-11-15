@@ -38,8 +38,23 @@ export default function EventsPage() {
         Come alone, most people do.
       </h1>
       <p className="mt-4 max-w-2xl text-muted">
-        Real-life meetups in Oslo, usually on a Sunday. Pick a date, show up,
-        and say hi first.
+        Have an idea for an event you&apos;d like to host? Send me an email at{" "}
+        <a
+          href="mailto:emily@thegirlsocial.com"
+          className="underline decoration-border underline-offset-4 hover:text-accent"
+        >
+          emily@thegirlsocial.com
+        </a>{" "}
+        or reach out via{" "}
+        <a
+          href="https://www.instagram.com/oslogirlsocial/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline decoration-border underline-offset-4 hover:text-accent"
+        >
+          Instagram
+        </a>
+        .
       </p>
 
       <section className="mt-12" aria-labelledby="coming-up">
