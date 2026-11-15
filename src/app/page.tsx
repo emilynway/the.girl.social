@@ -1,6 +1,8 @@
 import NewsletterForm from "@/components/NewsletterForm";
 import VibeQuiz from "@/components/VibeQuiz";
 import FounderStory from "@/components/FounderStory";
+import Ticker from "@/components/Ticker";
+import PhotoCollage from "@/components/PhotoCollage";
 
 export default function Home() {
   return (
@@ -20,7 +22,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-border">
+      <Ticker />
+
+      <section className="border-b border-border">
         <div className="mx-auto grid max-w-4xl gap-12 px-6 py-20 text-center sm:grid-cols-2 sm:gap-16">
           <div>
             <h2 className="font-serif text-2xl font-normal tracking-[-0.01em]">
@@ -42,7 +46,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-2xl px-6 py-24 text-center sm:py-32">
+      <section className="py-24 sm:py-32">
+        <PhotoCollage />
+      </section>
+
+      <section className="mx-auto max-w-2xl px-6 pb-24 text-center sm:pb-32">
         <span className="tag">Find your fit</span>
         <h2 className="mt-6 font-serif text-4xl font-normal leading-tight tracking-[-0.015em] sm:text-5xl">
           What kind of Oslo Girl are you?
@@ -73,6 +81,17 @@ export default function Home() {
         <div className="mt-8 flex justify-center">
           <NewsletterForm />
         </div>
+        <p className="mt-6 text-sm text-muted">
+          Or follow along on Instagram:{" "}
+          <a
+            href="https://www.instagram.com/oslogirlsocial"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-border underline-offset-4 transition hover:text-foreground"
+          >
+            @oslogirlsocial
+          </a>
+        </p>
       </section>
     </div>
   );
