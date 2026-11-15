@@ -45,3 +45,39 @@ body {
   font-weight: 500;
   letter-spacing: 0.02em;
 }
+
+/* Ticker: the one thing that moves on its own. Slow, and off for reduced motion. */
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 45s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+  }
+}
+
+/* Polaroid: white frame, slight tilt that straightens on hover */
+.polaroid {
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.6rem 0.4rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: rotate 0.25s ease, scale 0.25s ease;
+}
+
+.polaroid:hover {
+  rotate: 0deg;
+  scale: 1.03;
+}
