@@ -92,7 +92,7 @@ export default function AboutPage() {
           className="w-full rounded-xl object-cover"
         />
         <figcaption className="mt-3 text-sm text-muted">
-          Just some of the amazing women who make Oslo Girl Social what it is.
+          Some of the amazing women who make Oslo Girl Social what it is.
         </figcaption>
       </figure>
 
