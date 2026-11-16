@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import EventsCalendar from "@/components/EventsCalendar";
 import MaybeLink from "@/components/MaybeLink";
 import NewsletterForm from "@/components/NewsletterForm";
-import { events, sortedEvents, todayInOslo } from "@/lib/events";
+import { eventImage, events, sortedEvents, todayInOslo } from "@/lib/events";
 
 export const metadata: Metadata = {
   title: "Events | Oslo Girl Social",
@@ -74,19 +75,59 @@ export default function EventsPage() {
               <li key={e.slug}>
                 <MaybeLink
                   href={e.href}
-                  className="block h-full rounded-xl border border-border p-6 transition [a&]:hover:bg-card"
+                  className="flex h-full flex-col overflow-hidden rounded-xl border border-border transition [a&]:hover:bg-card"
                 >
-                  <p className="text-sm text-accent">
-                    {formatDate(e.date)} · {e.start}
-                    {e.end ? `–${e.end}` : ""}
-                  </p>
-                  <p className="mt-2 font-serif text-xl tracking-[-0.01em]">
-                    {e.title}
-                  </p>
-                  <p className="mt-2 text-sm text-muted">{e.blurb}</p>
-                  <p className="mt-4 text-xs text-muted">
-                    {e.price ? `${e.where} · ${e.price}` : e.where}
-                  </p>
+                  <div className="relative aspect-[16/9] bg-card">
+                    <Image
+                      src={eventImage(e)}
+                      alt=""
+                      fill
+                      sizes="(max-width: 640px) 100vw, 480px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <p className="text-sm text-accent">
+                      {formatDate(e.date)} · {e.start}
+                      {e.end ? `–${e.end}` : ""}
+                    </p>
+                    <p className="mt-2 font-serif text-xl tracking-[-0.01em]">
+                      {e.title}
+                    </p>
+                    <p className="mt-2 text-sm text-muted">{e.blurb}</p>
+                    {e.hosts && e.hosts.length > 0 && (
+                      <div className="mt-4 flex items-center gap-3">
+                        <div className="flex -space-x-2">
+                          {e.hosts.map((h) =>
+                            h.photo ? (
+                              <Image
+                                key={h.name}
+                                src={h.photo}
+                                alt={h.name}
+                                width={64}
+                                height={64}
+                                className="h-8 w-8 rounded-full object-cover ring-2 ring-background"
+                              />
+                            ) : (
+                              <span
+                                key={h.name}
+                                aria-hidden
+                                className="flex h-8 w-8 items-center justify-center rounded-full bg-card font-serif text-sm ring-2 ring-background"
+                              >
+                                {h.name[0]}
+                              </span>
+                            ),
+                          )}
+                        </div>
+                        <p className="text-sm">
+                          Led by {e.hosts.map((h) => h.name).join(" & ")}
+                        </p>
+                      </div>
+                    )}
+                    <p className="mt-auto pt-4 text-xs text-muted">
+                      {e.price ? `${e.where} · ${e.price}` : e.where}
+                    </p>
+                  </div>
                 </MaybeLink>
               </li>
             ))}
