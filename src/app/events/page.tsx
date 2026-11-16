@@ -3,7 +3,7 @@ import Image from "next/image";
 import EventsCalendar from "@/components/EventsCalendar";
 import MaybeLink from "@/components/MaybeLink";
 import NewsletterForm from "@/components/NewsletterForm";
-import { eventImage, events, sortedEvents, todayInOslo } from "@/lib/events";
+import { events, sortedEvents, todayInOslo } from "@/lib/events";
 
 export const metadata: Metadata = {
   title: "Events | Oslo Girl Social",
@@ -77,15 +77,17 @@ export default function EventsPage() {
                   href={e.href}
                   className="flex h-full flex-col overflow-hidden rounded-xl border border-border transition [a&]:hover:bg-card"
                 >
-                  <div className="relative aspect-[16/9] bg-card">
-                    <Image
-                      src={eventImage(e)}
-                      alt=""
-                      fill
-                      sizes="(max-width: 640px) 100vw, 480px"
-                      className="object-cover"
-                    />
-                  </div>
+                  {e.image && (
+                    <div className="relative aspect-[16/9] bg-card">
+                      <Image
+                        src={e.image}
+                        alt=""
+                        fill
+                        sizes="(max-width: 640px) 100vw, 480px"
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
                   <div className="flex flex-1 flex-col p-6">
                     <p className="text-sm text-accent">
                       {formatDate(e.date)} · {e.start}

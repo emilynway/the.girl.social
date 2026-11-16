@@ -14,27 +14,14 @@ export type EventItem = {
   /** Event page on this site, or an external ticket link. Leave out if there is no page. */
   href?: string;
   /**
-   * Photo for the event card, a path under /public (e.g. "/community/workshop.webp").
-   * Leave out to use a community photo picked from the event title.
+   * Photo for the event card, a path under /public. Only add one that is really
+   * from this event or place; cards without a photo just show the text.
    */
   image?: string;
   /** Community members leading the event. `photo` is optional; initials are shown without one. */
   hosts?: { name: string; photo?: string }[];
 };
 
-/** Fallback card photos, matched on words in the event title. */
-const fallbackImages: [RegExp, string][] = [
-  [/walk|hike/i, "/community/sunday-walk-crew.webp"],
-  [/yoga|yin|stretch/i, "/community/yoga-in-the-park.webp"],
-  [/board game|game night|games night/i, "/community/workshop.webp"],
-  [/book|quiz|swap|social/i, "/events/firepit.webp"],
-];
-
-export function eventImage(e: EventItem): string {
-  if (e.image) return e.image;
-  for (const [re, src] of fallbackImages) if (re.test(e.title)) return src;
-  return "/community/workshop.webp";
-}
 
 /**
  * The list of events shown on /events and in its calendar.
@@ -182,7 +169,6 @@ export const events: EventItem[] = [
     where: "Kulturhuset, Youngs gate 6",
     blurb:
       "A pub quiz packed with pop culture: celebrity drama, film and TV trivia, music and more. Join the team via the Let's go to a quiz WhatsApp group.",
-    image: "/events/firepit.webp",
   },
   {
     slug: "akerselva-walk-2026-12-05",
@@ -193,7 +179,6 @@ export const events: EventItem[] = [
     price: "Free",
     blurb:
       "Community lead Julie leads the crew from outside Nydalen T-bane station, following the river downhill and ending with coffee at Mathallen.",
-    image: "/community/autumn-walk.webp",
     hosts: [{ name: "Julie" }],
   },
 ];
