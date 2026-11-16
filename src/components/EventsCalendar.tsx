@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import MaybeLink from "@/components/MaybeLink";
-import type { EventItem } from "@/lib/events";
+import { isWalk, type EventItem } from "@/lib/events";
 
 const WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
@@ -112,7 +112,17 @@ export default function EventsCalendar({
         </div>
       </div>
 
-      <div className="mt-6 overflow-hidden rounded-xl border border-border">
+      <div className="mt-4 flex gap-5 text-xs text-muted">
+        <span className="flex items-center gap-2">
+          <span aria-hidden className="h-3 w-3 rounded-sm bg-walk" />
+          Walks
+        </span>
+        <span className="flex items-center gap-2">
+          <span aria-hidden className="h-3 w-3 rounded-sm bg-soft" />
+          Other events
+        </span>
+      </div>
+      <div className="mt-3 overflow-hidden rounded-xl border border-border">
         <div className="grid grid-cols-7 border-b border-border bg-card text-center text-xs font-medium uppercase tracking-[0.14em] text-muted">
           {WEEKDAYS.map((d) => (
             <div key={d} className="py-2">
@@ -155,7 +165,9 @@ export default function EventsCalendar({
                             className={`rounded-md px-1.5 py-1 text-[11px] leading-tight transition focus:outline-none focus-visible:ring-2 focus-visible:ring-accent sm:text-xs ${
                               past
                                 ? "bg-card text-muted hover:text-foreground"
-                                : "bg-soft text-foreground hover:bg-soft/70"
+                                : isWalk(e)
+                                  ? "bg-walk text-foreground hover:bg-walk/70"
+                                  : "bg-soft text-foreground hover:bg-soft/70"
                             }`}
                           >
                             <span className="block font-medium">{e.start}</span>
@@ -192,7 +204,13 @@ export default function EventsCalendar({
                   <span className="w-56 shrink-0 text-sm text-muted">
                     {formatDay(e.date)} · {formatTime(e)}
                   </span>
-                  <span className="font-medium">{e.title}</span>
+                  <span className="flex items-center gap-2 font-medium">
+                    <span
+                      aria-hidden
+                      className={`h-2.5 w-2.5 shrink-0 rounded-full ${isWalk(e) ? "bg-walk" : "bg-soft"}`}
+                    />
+                    {e.title}
+                  </span>
                   <span className="text-sm text-muted sm:ml-auto">{e.where}</span>
                 </MaybeLink>
               </li>

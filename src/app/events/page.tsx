@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import EventsCalendar from "@/components/EventsCalendar";
 import MaybeLink from "@/components/MaybeLink";
 import NewsletterForm from "@/components/NewsletterForm";
-import { events, sortedEvents, todayInOslo } from "@/lib/events";
+import { events, isWalk, sortedEvents, todayInOslo } from "@/lib/events";
 
 export const metadata: Metadata = {
   title: "Events | Oslo Girl Social",
@@ -74,9 +74,18 @@ export default function EventsPage() {
               <li key={e.slug}>
                 <MaybeLink
                   href={e.href}
-                  className="block h-full rounded-xl border border-border p-6 transition [a&]:hover:bg-card"
+                  className={`block h-full rounded-xl border border-border border-l-4 p-6 transition [a&]:hover:bg-card ${
+                    isWalk(e) ? "border-l-walk" : "border-l-soft"
+                  }`}
                 >
-                  <p className="text-sm text-accent">
+                  <span
+                    className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-medium ${
+                      isWalk(e) ? "bg-walk" : "bg-soft"
+                    }`}
+                  >
+                    {isWalk(e) ? "Walk" : "Event"}
+                  </span>
+                  <p className="mt-3 text-sm text-accent">
                     {formatDate(e.date)} · {e.start}
                     {e.end ? `–${e.end}` : ""}
                   </p>

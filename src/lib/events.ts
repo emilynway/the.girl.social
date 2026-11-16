@@ -13,7 +13,13 @@ export type EventItem = {
   blurb: string;
   /** Event page on this site, or an external ticket link. Leave out if there is no page. */
   href?: string;
+  /** "walk" or "event". Leave out and it is worked out from the title (anything with "walk" in it is a walk). */
+  kind?: "walk" | "event";
 };
+
+export function isWalk(e: EventItem): boolean {
+  return e.kind ? e.kind === "walk" : /\bwalk/i.test(e.title);
+}
 
 /**
  * The list of events shown on /events and in its calendar.

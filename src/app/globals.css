@@ -9,6 +9,7 @@
   --accent-dark: #b4001f;
   --soft: #c9dff0; /* Fjord, soft surface for tags, highlights, quiz result */
   --stem: #14372b;
+  --walk: #d7ebdd; /* Sage, soft surface for walks on the events page */
   --muted: #6f6f6f;
   --card: #f6f7f8;
   --border: #e6e6e6;
@@ -21,6 +22,7 @@
   --color-accent-dark: var(--accent-dark);
   --color-soft: var(--soft);
   --color-stem: var(--stem);
+  --color-walk: var(--walk);
   --color-muted: var(--muted);
   --color-card: var(--card);
   --color-border: var(--border);
