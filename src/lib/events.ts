@@ -169,6 +169,7 @@ export const events: EventItem[] = [
     where: "Kulturhuset, Youngs gate 6",
     blurb:
       "A pub quiz packed with pop culture: celebrity drama, film and TV trivia, music and more. Join the team via the Let's go to a quiz WhatsApp group.",
+    image: "/events/iconapopquiz.webp",
   },
   {
     slug: "akerselva-walk-2026-12-05",
