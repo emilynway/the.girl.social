@@ -16,11 +16,15 @@ const partnerGroups = [
       "Upower Coaching",
       "Spilloteket",
       "Dee Harlow Art",
+      "Sigrid's Yoga",
+      "Blush Yoga",
+      "Dog Friendly Oslo",
+      "Contend Her Run Club",
     ],
   },
   {
     title: "Where we meet",
-    names: ["Java Espressobar", "Åpent Bakeri", "Hakone"],
+    names: ["Java Espressobar", "Åpent Bakeri", "Hakone", "Hernandez"],
   },
 ];
 
